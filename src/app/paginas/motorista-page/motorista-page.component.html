@@ -1,0 +1,33 @@
+<h2>Lista de Motoristas</h2>
+
+<button (click)="novoMotorista()">Novo Motorista</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Número CNH</th>
+            <th>Categoria CNH</th>
+            <th>Data de Nascimento</th>
+            <th>Status</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let motorista of motoristas">
+            <td>{{ motorista.id }}</td>
+            <td>{{ motorista.nome }}</td>
+            <td>{{ motorista.cpf }}</td>
+            <td>{{ motorista.numeroCNH }}</td>
+            <td>{{ motorista.categoriaCNH }}</td>
+            <td>{{ motorista.dataNascimento }}</td>
+            <td>{{ motorista.status ? 'Ativo' : 'Inativo' }}</td>
+            <td>
+                <button (click)="editarMotorista(motorista)">Editar</button>
+                <button (click)="excluirMotorista(motorista)">Excluir</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

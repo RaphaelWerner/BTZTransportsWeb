@@ -1,0 +1,47 @@
+<form #motoristaForm="ngForm" (ngSubmit)="CadastrarMotorista(motoristaForm)">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="motorista.nome" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="cpf">CPF:</label>
+      <input type="text" class="form-control" id="cpf" name="cpf" [(ngModel)]="motorista.cpf" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="numeroCNH">Número CNH:</label>
+      <input type="text" class="form-control" id="numeroCNH" name="numeroCNH" [(ngModel)]="motorista.numeroCNH" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="categoriaCNH">Categoria CNH:</label>
+      <select class="form-control" type="number" id="categoriaCNH" name="categoriaCNH" [(ngModel)]="motorista.categoriaCNH" required>
+        <option type="number" value="1">A</option>
+        <option type="number" value="2">B</option>
+        <option type="number" value="3">C</option>
+        <option type="number" value="4">D</option>
+        <option type="number" value="5">E</option>
+      </select>
+    </div>
+  
+    <div class="form-group">
+      <label for="dataNascimento">Data de Nascimento:</label>
+      <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" [(ngModel)]="motorista.dataNascimento" required>
+    </div>
+  
+    <div class="form-group">
+      <label>Status:</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" id="ativo" name="status" value= true [(ngModel)]="motorista.status" required>
+        <label class="form-check-label" for="ativo">Ativo</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" id="inativo" name="status" value=false [(ngModel)]="motorista.status" required>
+        <label class="form-check-label" for="inativo">Inativo</label>
+      </div>
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+  

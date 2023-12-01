@@ -1,0 +1,34 @@
+<h2>Lista de Veiculos</h2>
+
+<button (click)="novoVeiculo()">Novo Veiculo</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Placa</th>
+            <th>Tipo de Combustível</th>
+            <th>Fabricante</th>
+            <th>Ano de Fabricação</th>
+            <th>Capacidade do Tanque</th>
+            <th>Observaçoes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let veiculo of veiculos">
+            <td>{{ veiculo.id }}</td>
+            <td>{{ veiculo.nome }}</td>
+            <td>{{ veiculo.placa }}</td>
+            <td>{{ veiculo.tipoCombustivel }}</td>
+            <td>{{ veiculo.fabricante }}</td>
+            <td>{{ veiculo.anoFabricacao }}</td>
+            <td>{{ veiculo.capacidadeTanque }}</td>
+            <td>{{ veiculo.observacoes }}</td>
+            <td>
+                <button (click)="editarVeiculo(veiculo)">Editar</button>
+                <button (click)="excluirVeiculo(veiculo)">Excluir</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
