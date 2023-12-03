@@ -1,16 +1,38 @@
-<div class="center-form">
+<nz-layout>
+    <nz-sider nzCollapsible nzWidth="300px">
     <img src="../../../assets/images/logo_bitzen.png"  alt="Logo" class="logo">
-    <div class="informacoes-empresa">
-        <h2>Informações da Empresa BTZ Transports</h2>
-
-        <p>Endereço: Av. das Palmeiras, 40 – Maringá – PR</p>
-        <p>Contato: (44) 3246-4144 / (44) 99999-8888 (whats)</p>
-        <p>Horário de atendimento: seg/sex – 08h00 – 22h00</p>
-
-        <button (click) = "navegarMotoristas()">Motoristas</button>
-        <button (click) = "navegarVeiculos()">Veiculos</button>
-        <button (click) = "navegarAbastecimentos()">Abastecimentos</button>
-
-
-    </div>
-</div>
+      <ul nz-menu nzTheme="dark" nzMode="inline">
+        <li (click)="navegarInformacoes()" nz-menu-item>
+            <span nz-icon nzType="desktop"></span>
+            <span>Informaçoes da Empresa</span>
+          </li>
+        <li nz-submenu nzTitle="Motoristas" nzIcon="idcard">
+          <ul>
+            <li (click)="navegarCadastroMotoristas()" nz-menu-item>Cadastrar Motorista</li>
+            <li (click)="navegarMotoristas()" nz-menu-item>Lista de Motorista</li>
+          </ul>
+        </li>
+        <li nz-submenu nzTitle="Veiculos" nzIcon="car">
+          <ul>
+            <li (click)="navegarCadastroVeiculos()" nz-menu-item>Cadastrar Veiculos</li>
+            <li (click)="navegarVeiculos()" nz-menu-item>Lista de Veiculos</li>
+          </ul>
+        </li>
+        <li nz-submenu nzTitle="Abastecimentos" nzIcon="dollar">
+            <ul>
+              <li (click)="navegarCadastroAbastecimentos()" nz-menu-item>Registrar Abastecimento</li>
+              <li (click)="navegarAbastecimentos()" nz-menu-item>Histórico de Abastecimento</li>
+            </ul>
+          </li>
+      </ul>
+    </nz-sider>
+    <nz-layout>
+      <nz-header></nz-header>
+      <nz-content>
+        <nz-breadcrumb>          
+          <router-outlet></router-outlet>
+        </nz-breadcrumb>
+      </nz-content>
+      <nz-footer>BTZ Transports ©2023 Development By Raphael Werner</nz-footer>
+    </nz-layout>
+  </nz-layout>

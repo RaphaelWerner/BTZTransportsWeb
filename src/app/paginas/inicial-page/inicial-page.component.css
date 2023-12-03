@@ -1,43 +1,31 @@
-.center-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-  }
-  
+
   .logo {
-    width: 150px;
-    height: auto;
-    margin-bottom: 20px;
+    height: 32px;
+    margin: 16px;
   }
-  
-  .informacoes-empresa {
+
+  nz-header {
+    background: #fff;
+    padding: 0;
+  }
+
+  nz-content {
+    margin: 0 16px;
+  }
+
+  nz-breadcrumb {
+    margin: 16px 0;
+  }
+
+  .inner-content {
+    padding: 24px;
+    background: #fff;
+    min-height: 360px;
+  }
+
+  nz-footer {
     text-align: center;
   }
-  
-  .informacoes-empresa h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
+  nz-layout {
+    height: 100%;
   }
-  
-  .informacoes-empresa p {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .informacoes-empresa button {
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .informacoes-empresa button:hover {
-    background-color: #2980b9;
-  }
-  

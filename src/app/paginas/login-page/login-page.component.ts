@@ -7,6 +7,8 @@ import {FormsModule} from '@angular/forms';
 
 import { AuthService} from '../../services/AuthService'
 
+
+
 @Component({
   selector: 'app-login-page',
   standalone: true,
@@ -31,7 +33,8 @@ export class LoginPageComponent {
     this.service.Login(this.username,this.password).then((login) => {
       if (login) {
         console.log('teste ta pssando aqui')
-        this.router.navigate(['/home']);
+
+        this.router.navigate(['app']);
       }
     }).catch((error) => {
         console.log(error.error)
