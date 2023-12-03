@@ -1,4 +1,4 @@
-import { Combustivel } from '../models/EnumCombustivel';
+import { Combustivel } from './Enums';
 import { Motorista } from './MotoristaModel';
 import { Veiculo } from './VeiculoModel';
 

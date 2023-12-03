@@ -8,16 +8,20 @@ import { Veiculo } from '../../models/VeiculoModel';
 import { VeiculoService } from '../../services/VeiculoService';
 import { FormsModule } from '@angular/forms';
 
+import { EnumCombustivelPipe } from '../../pipes/enumCombustivelPipe';
+
 @Component({
   selector: 'app-veiculo-page',
   standalone: true,
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    EnumCombustivelPipe,
   ],
   templateUrl: './veiculo-page.component.html',
   styleUrl: './veiculo-page.component.css'
 })
+
 export class VeiculoPageComponent {
 
   constructor(private router: Router, private service: AuthService, private veiculoService: VeiculoService) {

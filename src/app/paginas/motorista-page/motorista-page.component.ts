@@ -9,12 +9,17 @@ import { MotoristaService} from '../../services/MotoristaService'
 import {Motorista} from '../../models/MotoristaModel'
 import {FormsModule} from '@angular/forms';
 
+import { EnumCategoriaCNHPipe } from '../../pipes/enumCNHPipe';
+import { formatCPF } from '../../pipes/CPFFormatPipe';
+
 @Component({
   selector: 'app-motorista-page',
   standalone: true,
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    EnumCategoriaCNHPipe,
+    formatCPF,
   ],
   templateUrl: './motorista-page.component.html',
   styleUrl: './motorista-page.component.css',

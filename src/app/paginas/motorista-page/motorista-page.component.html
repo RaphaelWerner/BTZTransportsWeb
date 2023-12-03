@@ -19,9 +19,9 @@
         <tr *ngFor="let motorista of motoristas">
             <td>{{ motorista.id }}</td>
             <td>{{ motorista.nome }}</td>
-            <td>{{ motorista.cpf }}</td>
+            <td>{{ motorista.cpf | formatCPF}}</td>
             <td>{{ motorista.numeroCNH }}</td>
-            <td>{{ motorista.categoriaCNH }}</td>
+            <td>{{ motorista.categoriaCNH | categoriaCNH }}</td>
             <td>{{ motorista.dataNascimento | date:'dd/MM/yyyy' }}</td>
             <td>{{ motorista.status ? 'Ativo' : 'Inativo' }}</td>
             <td>
