@@ -6,6 +6,8 @@ import { MotoristaPageComponent  } from '../app/paginas/motorista-page/motorista
 import { MotoristaCadastroPageComponent  } from '../app/paginas/motorista-cadastro-page/motorista-cadastro-page.component'
 import { VeiculoPageComponent } from './paginas/veiculo-page/veiculo-page.component';
 import { VeiculoCadastroPageComponent } from './paginas/veiculo-cadastro-page/veiculo-cadastro-page.component';
+import { AbastecimentoPageComponent } from './paginas/abastecimento-page/abastecimento-page.component';
+import { AbastecimentoCadastroPageComponent } from './paginas/abastecimento-cadastro-page/abastecimento-cadastro-page.component';
 
 export const routes: Routes = [
     { path: '', component: LoginPageComponent },
@@ -14,6 +16,8 @@ export const routes: Routes = [
     { path: 'motoristas', component: MotoristaPageComponent },
     { path: 'motoristas/cadastro', component: MotoristaCadastroPageComponent },
     { path: 'veiculos', component: VeiculoPageComponent },
-    { path: 'veiculos/cadastro', component: VeiculoCadastroPageComponent }
+    { path: 'veiculos/cadastro', component: VeiculoCadastroPageComponent },
+    { path: 'abastecimentos', component: AbastecimentoPageComponent },
+    { path: 'abastecimentos/cadastro', component: AbastecimentoCadastroPageComponent }
     
 ];

@@ -1,0 +1,29 @@
+<form #abastecimentoForm="ngForm" (ngSubmit)="salvar(abastecimentoForm)">
+    <label for="veiculoSelect">Veículo:</label>
+    <select id="veiculoSelect" [(ngModel)]="abastecimento.veiculoId" name="veiculoId">
+      <option *ngFor="let veiculo of veiculos" [ngValue]="veiculo.id">{{ veiculo.nome }}</option>
+    </select>
+    
+    <label for="motoristaSelect">Motorista:</label>
+    <select id="motoristaSelect" [(ngModel)]="abastecimento.motoristaId" name="motoristaId">
+      <option *ngFor="let motorista of motoristas" [ngValue]="motorista.id">{{ motorista.nome }}</option>
+    </select>
+    
+    <label for="dataInput">Data:</label>
+    <input type="date" id="dataInput" [(ngModel)]="abastecimento.data" name="data">
+
+    
+    <label for="tipoCombustivel">Tipo de Combustível:</label>
+    <select class="form-control" type="number" id="tipoCombustivel" name="tipoCombustivel" [(ngModel)]="abastecimento.tipoCombustivel" required>
+        <option type="number" value="1">Gasolina</option>
+        <option type="number" value="2">Etanol</option>
+        <option type="number" value="3">Diesel</option>
+    </select>
+
+      <label for="quantidadeAbastecida">Quantidade Abastecida:</label>
+    <input type="number" class="form-control" id="quantidadeAbastecida" name="quantidadeAbastecida" [(ngModel)]="abastecimento.quantidadeAbastecida" required>
+
+    
+  
+    <button type="submit">Salvar</button>
+  </form>

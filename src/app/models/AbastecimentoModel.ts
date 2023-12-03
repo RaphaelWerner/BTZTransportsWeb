@@ -1,11 +1,23 @@
 import { Combustivel } from '../models/EnumCombustivel';
+import { Motorista } from './MotoristaModel';
+import { Veiculo } from './VeiculoModel';
 
-export class AbastecimentoModel {
-    public Id?: number;
-    public VeiculoId: number = 0;
-    public MotoristaId: number = 0;
-    public Data?: Date ;
-    public TipoCombustivel?: Combustivel;
-    public QuantidadeAbastecida?: number;
-    public ValorTotal?: number; // O uso do '?' indica que o campo é opcional (pode ser null ou undefined)
+export interface Abastecimento {
+    id?: number;
+    veiculoId: number;
+    motoristaId: number;
+    data: Date | null;
+    tipoCombustivel: number;
+    quantidadeAbastecida: number;
+    valorTotal: number;
+}
+
+export interface AbastecimentoResponse {
+    id?: number;
+    veiculoNome: string;
+    motoristaNome: string;
+    data: Date | null;
+    tipoCombustivel: number;
+    quantidadeAbastecida: number;
+    valorTotal: number;
 }

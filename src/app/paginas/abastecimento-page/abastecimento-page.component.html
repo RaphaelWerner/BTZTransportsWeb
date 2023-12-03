@@ -1,1 +1,26 @@
-<p>abastecimento-page works!</p>
+<h1>Lista de Abastecimentos</h1>
+
+<button (click)="novoAbastecimento()">Registrar Abastecimento</button>
+
+<table>
+    <thead>
+      <tr>
+        <th>Veículo</th>
+        <th>Motorista</th>
+        <th>Data</th>
+        <th>Tipo de Combustível</th>
+        <th>Quantidade Abastecida</th>
+        <th>Valor Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let abastecimento of abastecimentos">
+        <td>{{ abastecimento.veiculoNome }}</td>
+        <td>{{ abastecimento.motoristaNome }}</td>
+        <td>{{ abastecimento.data | date:'dd/MM/yyyy' }}</td>
+        <td>{{ abastecimento.tipoCombustivel }}</td>
+        <td>{{ abastecimento.quantidadeAbastecida }}</td>
+        <td>{{ abastecimento.valorTotal | currency:'R$ ':'symbol':'1.2' }}</td>
+      </tr>
+    </tbody>
+  </table>

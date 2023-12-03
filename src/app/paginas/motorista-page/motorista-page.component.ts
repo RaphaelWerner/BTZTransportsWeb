@@ -17,8 +17,9 @@ import {FormsModule} from '@angular/forms';
     FormsModule
   ],
   templateUrl: './motorista-page.component.html',
-  styleUrl: './motorista-page.component.css'
+  styleUrl: './motorista-page.component.css',
 })
+
 export class MotoristaPageComponent {
 
   constructor(private router: Router, private service: AuthService, private motoristaService: MotoristaService) {

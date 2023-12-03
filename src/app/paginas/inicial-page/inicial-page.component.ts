@@ -39,7 +39,7 @@ export class InicialPageComponent {
     this.router.navigate(['/veiculos']);
   }
   navegarAbastecimentos(){
-
+    this.router.navigate(['/abastecimentos']);
   }
 
 

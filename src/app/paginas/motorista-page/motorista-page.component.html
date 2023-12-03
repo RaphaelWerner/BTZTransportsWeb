@@ -22,7 +22,7 @@
             <td>{{ motorista.cpf }}</td>
             <td>{{ motorista.numeroCNH }}</td>
             <td>{{ motorista.categoriaCNH }}</td>
-            <td>{{ motorista.dataNascimento }}</td>
+            <td>{{ motorista.dataNascimento | date:'dd/MM/yyyy' }}</td>
             <td>{{ motorista.status ? 'Ativo' : 'Inativo' }}</td>
             <td>
                 <button (click)="editarMotorista(motorista)">Editar</button>
