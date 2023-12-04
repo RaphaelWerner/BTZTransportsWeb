@@ -171,7 +171,6 @@ export class InicialPageComponent {
 
     this.service.Autenticar().then((autenticado) => {
       if (!autenticado) {
-        console.log("Deslogado")
         this.router.navigate(['/login']);
       }
     }).catch((error) => {
@@ -211,6 +210,11 @@ export class InicialPageComponent {
   
   navegarCadastroAbastecimentos() {
     this.router.navigate(['abastecimentos', 'cadastro'], { relativeTo: this.route });
+  }
+
+  deslogar(){
+    localStorage.removeItem('BTZTransportsTokenAuth');
+    this.router.navigate(['/login']);
   }
 
 

@@ -1,6 +1,7 @@
 <nz-layout>
     <nz-sider nzCollapsible nzWidth="300px">
-    <img src="../../../assets/images/logo_bitzen.png"  alt="Logo" class="logo">
+    <img style="margin-left: 10%;" src="../../../assets/images/logo_bitzen.png"  alt="Logo" class="logo">
+    <nz-divider style="background-color: #ccc; margin: 0%;"></nz-divider>
       <ul nz-menu nzTheme="dark" nzMode="inline">
         <li (click)="navegarInformacoes()" nz-menu-item>
             <span nz-icon nzType="desktop"></span>
@@ -24,6 +25,7 @@
               <li (click)="navegarAbastecimentos()" nz-menu-item>Histórico de Abastecimento</li>
             </ul>
           </li>
+          <button (click)="deslogar()" style="margin: 10%; width: 80%;" nz-button [nzType]="'primary'" nzDanger>Sair</button>
       </ul>
     </nz-sider>
     <nz-layout>

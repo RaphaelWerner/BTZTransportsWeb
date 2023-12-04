@@ -1,12 +1,24 @@
+
+
 <div class="login-page">
-    <img src="../../../assets/images/logo_bitzen.png"  alt="Logo" class="logo">
-    <h2>Faça login</h2>
-    <form (ngSubmit)="Login()" class="login-form">
-        <input type="text" [(ngModel)]="username" name="username" placeholder="Usuário" required>
-        <input type="password" [(ngModel)]="password" name="password" placeholder="Senha" required>
-        <button type="submit">Login</button>
-        <div *ngIf="errorMessage" class="error-message">
-            {{ errorMessage }}
-        </div>
-    </form>
+<img src="../../../assets/images/logo_bitzen.png"  alt="Logo" class="logo">
+<form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Insira o usuário">
+          <nz-input-group nzPrefixIcon="user">
+            <input formControlName="usuario" nz-input placeholder="Usuário" />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Digite a senha!">
+          <nz-input-group nzPrefixIcon="lock">
+            <input formControlName="senha" nz-input type="password" placeholder="Senha" />
+          </nz-input-group>
+
+        </nz-form-control>
+      </nz-form-item>
+      <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Entrar</button>
+  </form>
 </div>
